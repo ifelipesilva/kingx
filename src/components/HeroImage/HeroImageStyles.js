@@ -54,4 +54,8 @@ export const Text = styled.div`
       font-size: var(--fontSmall);
     }
   }
+
+  @media (max-width: 720px) {
+    max-width: 100%;
+  }
 `;
