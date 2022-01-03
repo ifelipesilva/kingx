@@ -16,10 +16,14 @@ import { useHomeFetch } from '../hooks/useHomeFetch';
 
 //Image
 import NoImage from '../images/no_image.jpg';
+import Button from './Button';
 
 const Home = () => {
-  const { state, loading, error, searchTerm, setSearchTerm } = useHomeFetch();
-  console.log(state);
+  const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } =
+    useHomeFetch();
+
+  if (error) return <div>Ops.. something went wrong...</div>;
+
   return (
     <>
       {!searchTerm && state.results[0] && (
@@ -47,7 +51,10 @@ const Home = () => {
           // <div key={movie.id}>{movie.title}</div>
         ))}
       </Grid>
-      <Spinner />
+      {loading && <Spinner />}
+      {state.page < state.total_pages && !loading && (
+        <Button text="Load more" callback={() => setIsLoadingMore(true)} />
+      )}
     </>
   );
 };

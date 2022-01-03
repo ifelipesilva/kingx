@@ -4,8 +4,8 @@ export const Spinner = styled.div`
   font-size: 10px;
   margin: 50px auto;
   text-indent: -9999em;
-  width: 3em;
-  height: 3em;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background: #050607;
   background: -moz-linear-gradient(left, #050607 10%, rgba(5, 6, 7, 0) 42%);
