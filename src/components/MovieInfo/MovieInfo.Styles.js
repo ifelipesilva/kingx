@@ -26,7 +26,7 @@ export const Content = styled.div`
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0 1rem;
 
   @media (max-width: 768px) {
     display: block;
