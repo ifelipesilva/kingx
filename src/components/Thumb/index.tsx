@@ -5,10 +5,10 @@ import { Image, Title, Year } from './Thumb.Styles';
 
 //types
 type Props = {
-  title: string,
+  title?: string,
   image:  string,
-  year:  string,
-  movieId: number,
+  year?:  string,
+  movieId?: number,
   clickable: boolean,
 }
 
